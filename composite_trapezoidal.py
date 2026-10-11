@@ -1,9 +1,10 @@
+
 import math
 
 def f(x):
     return math.exp(-x**2)
 
-def composite_trapezoidal(a, b, n):
+def composite_trapezoidal(f, a, b, n):
     h = (b - a) / n
     S = f(a) + f(b)
 
@@ -18,5 +19,5 @@ a = 0
 b = 1
 
 for n in [4, 6]:
-    I = composite_trapezoidal(a, b, n)
-    print("n =", n, "I =", I)
+    I = composite_trapezoidal(f, a, b, n)
+    print("Integral I =", "n =", n, "I =", I)
